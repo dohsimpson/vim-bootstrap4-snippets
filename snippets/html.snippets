@@ -1,0 +1,4329 @@
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/alerts/#javascript-behavior
+
+# Alerts
+
+# Alert success - Bootstrap 4
+snippet alesu
+	<div class="alert alert-success" role="alert">
+	  ${1:<strong>Well done!</strong> You successfully read this important alert message.}
+	</div>
+endsnippet
+
+# Alert info - Bootstrap 4
+snippet alein
+	<div class="alert alert-info" role="alert">
+	  ${1:<strong>Heads up!</strong> This alert needs your attention, but it's not super important.}
+	</div>
+endsnippet
+
+# Alert warning - Bootstrap 4
+snippet alewa
+	<div class="alert alert-warning" role="alert">
+	  ${1:<strong>Warning!</strong> Better check yourself, you're not looking too good.}
+	</div>
+endsnippet
+
+# Alert danger - Bootstrap 4
+snippet aleda
+	<div class="alert alert-danger" role="alert">
+	  ${1:<strong>Oh snap!</strong> Change a few things up and try submitting again.}
+	</div>
+endsnippet
+
+# Alert success w/ link color - Bootstrap 4
+snippet alesu
+	<div class="alert alert-success" role="alert">
+	  ${1:<strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.}
+	</div>
+endsnippet
+
+# Alert info w/ link color - Bootstrap 4
+snippet alein
+	<div class="alert alert-info" role="alert">
+	  ${1:<strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.}
+	</div>
+endsnippet
+
+# Alert warning w/ link color - Bootstrap 4
+snippet alewa
+	<div class="alert alert-warning" role="alert">
+	  ${1:<strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.}
+	</div>
+endsnippet
+
+# Alert danger w/ link color - Bootstrap 4
+snippet aleda
+	<div class="alert alert-danger" role="alert">
+	  ${1:<strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.}
+	</div>
+endsnippet
+
+# Alert dismissing - Bootstrap 4
+snippet aledis
+	<div class="alert alert-${2:success|info|warning|danger} alert-dismissible fade in" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	    <span class="sr-only">Close</span>
+	  </button>
+	  ${1:<strong>Holy guacamole!</strong> You should check in on some of those fields below.}
+	</div>
+endsnippet
+
+# Breadcrumb
+# Breadcrumb - Bootstrap 4
+snippet bre
+	<ol class="breadcrumb">
+		<li class="active">${1:Home}</li>
+	</ol>
+	<ol class="breadcrumb">
+		<li><a href="${4:#}">${1:Home}</a></li>
+		<li class="active">${2:Library}</li>
+	</ol>
+	<ol class="breadcrumb" style="margin-bottom: 5px;">
+		<li><a href="${4:#}">${1:Home}</a></li>
+		<li><a href="${4:#}">${2:Library}</a></li>
+		<li class="active">${3:Data}</li>
+	</ol>
+endsnippet
+# Buttons Dropdown
+# Button dropdown - Bootstrap 4
+snippet btndd
+	<div class="btn-group">
+		<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Action
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="${1:#}">${2:Separated link}</a>
+		</div>
+	</div>
+endsnippet
+
+
+# Button dropdown (Split button) - Bootstrap 4
+snippet btndds
+	<div class="btn-group">
+		<button type="button" class="btn btn-danger">Action</button>
+		<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="${1:#}">${2:Separated link}</a>
+		</div>
+	</div>
+endsnippet
+
+
+# Button dropdown (Large) - Bootstrap 4
+snippet btnddlg
+	<div class="btn-group">
+		<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Large button
+		</button>
+		<div class="dropdown-menu">
+			${1:...}
+		</div>
+	</div>
+endsnippet
+
+
+# Button dropdown (Small) - Bootstrap 4
+snippet btnddsm
+	<div class="btn-group">
+		<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Small button
+		</button>
+		<div class="dropdown-menu">
+			${1:...}
+		</div>
+	</div>
+endsnippet
+
+
+# Button dropup - Bootstrap 4
+snippet btndu
+	<div class="btn-group dropup">
+		<button type="button" class="btn btn-secondary">Dropup</button>
+		<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<div class="dropdown-menu">
+			${1:<!-- Dropdown menu links -->}
+		</div>
+	</div>
+endsnippet
+
+
+# Buttons Group
+# Button group - Bootstrap 4
+snippet btngr
+	<div class="btn-group" role="group" aria-label="${1:Basic example}">
+		<button type="button" class="btn btn-secondary">${2:Left}</button>
+		<button type="button" class="btn btn-secondary">${2:Middle}</button>
+		<button type="button" class="btn btn-secondary">${2:Right}</button>
+	</div>
+endsnippet
+
+
+# Button toolbar - Bootstrap 4
+snippet btntlb
+	<div class="btn-toolbar" role="toolbar" aria-label="${1:Toolbar with button groups}">
+		<div class="btn-group" role="group" aria-label="First group">
+			<button type="button" class="btn btn-secondary">$1</button>
+			<button type="button" class="btn btn-secondary">$2</button>
+			<button type="button" class="btn btn-secondary">$3</button>
+			<button type="button" class="btn btn-secondary">$4</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Second group">
+			<button type="button" class="btn btn-secondary">$5</button>
+			<button type="button" class="btn btn-secondary">$6</button>
+			<button type="button" class="btn btn-secondary">$7</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="Third group">
+			<button type="button" class="btn btn-secondary">$8</button>
+		</div>
+	</div>
+endsnippet
+
+
+# Button group size - Bootstrap 4
+snippet btngrsi
+	<div class="btn-group btn-group-${1:lg|sm|xs}" role="group" aria-label="${2:Toolbar with button groups}">
+		$3
+	</div>
+endsnippet
+
+
+# Button dropdown - Bootstrap 4
+snippet btndr
+	<div class="btn-group" role="group" aria-label="${3:Button group with nested dropdown}">
+		<button type="button" class="btn btn-secondary">$1</button>
+		<button type="button" class="btn btn-secondary">$2</button>
+		<div class="btn-group" role="group">
+			<button id="${4:btnGroupDrop1}" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Dropdown
+			</button>
+			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+				<a class="dropdown-item" href="${5:#}">${6:Dropdown link}</a>
+				<a class="dropdown-item" href="${5:#}">${6:Dropdown link}</a>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Button group - Bootstrap 4
+snippet btngrvr
+	<div class="btn-group-vertical" role="group" aria-label="${1:Basic example}">
+		<button type="button" class="btn btn-secondary">${2:Left}</button>
+		<button type="button" class="btn btn-secondary">${2:Middle}</button>
+		<button type="button" class="btn btn-secondary">${2:Right}</button>
+	</div>
+endsnippet
+# Buttons
+# Button - Bootstrap 4
+snippet btn
+	<button type="button" class="btn btn-primary">$1</button>
+endsnippet
+
+# Button colors - Bootstrap 4
+snippet btnc
+	<button type="button" class="btn btn-${1:primary|primary|secondary|success|warning|danger|link}">$2</button>
+endsnippet
+
+# Button Outline - Bootstrap 4
+snippet btno
+	<button type="button" class="btn btn-${1:primary|primary|secondary|success|warning|danger|link}-outline">$2</button>
+endsnippet
+
+# Button <a> - Bootstrap 4
+snippet btna
+	<a class="btn btn-primary" href="${1:#}" role="button">$2</a>
+endsnippet
+
+# Button <input> - Bootstrap 4
+snippet btni
+	<input class="btn btn-primary" type="button" value="$2">
+endsnippet
+
+# Button sizes - Bootstrap 4
+snippet btnsz
+	<button type="button" class="btn btn-primary btn-${1:lg|sm}">$2</button>
+endsnippet
+
+# Button block - Bootstrap 4
+snippet btnbk
+	<button type="button" class="btn btn-primary btn-lg btn-block">$1</button>
+endsnippet
+
+# Button state <a> - Bootstrap 4
+snippet btnast
+	<a href="#" class="btn btn-primary ${1:active|disabled}" role="button">$2</a>
+endsnippet
+
+# Button state - Bootstrap 4
+snippet btnst
+	<button type="button" class="btn btn-primary" disabled>$1</button>
+endsnippet
+
+# Button toggle - Bootstrap 4
+snippet btnt
+	<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">$1</button>
+endsnippet
+
+# Button plugin Checkbox - Bootstrap 4
+snippet btnpc
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary active">
+			<input type="checkbox" checked autocomplete="off">$1
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox" autocomplete="off">$2
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox" autocomplete="off">$3
+		</label>
+	</div>
+endsnippet
+
+# Button plugin Radio - Bootstrap 4
+snippet btnpr
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary active">
+			<input type="radio" name="options" id="option1" autocomplete="off" checked>$1
+		</label>
+		<label class="btn btn-primary">
+			<input type="radio" name="options" id="option2" autocomplete="off">$2
+		</label>
+		<label class="btn btn-primary">
+			<input type="radio" name="options" id="option3" autocomplete="off">$3
+		</label>
+	</div>
+endsnippet
+
+# Cards
+# Cards - Bootstrap 4
+snippet car
+	<div class="card">
+		<img class="card-img-top" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+		<div class="card-block">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${4:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+			<a href="${5:#}" class="btn btn-primary">${6:Button}</a>
+		</div>
+	</div>
+endsnippet
+
+# Cards content type - Bootstrap 4
+snippet carct
+	<div class="card">
+		<img class="card-img-top" data-src="${1:holder.js/100%x180/?text=Image cap}" alt="${2:Card image cap}">
+		<div class="card-block">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${4:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">${5:Cras justo odio}</li>
+			<li class="list-group-item">${5:Dapibus ac facilisis in}</li>
+			<li class="list-group-item">${5:Vestibulum at eros}</li>
+		</ul>
+		<div class="card-block">
+			<a href="${6:#}" class="card-link">${7:Card link}</a>
+			<a href="${6:#}" class="card-link">${7:Another link}</a>
+		</div>
+	</div>
+endsnippet
+
+# Cards content type w/o list - Bootstrap 4
+snippet carctwli
+	<div class="card">
+		<img class="card-img-top" data-src="${2:holder.js/100%x180/?text=Image cap}" alt="${3:Card image cap}">
+		<div class="card-block">
+			<p class="card-text">${1:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+		</div>
+	</div>
+endsnippet
+
+# Cards content type w/o img - Bootstrap 4
+snippet carctwimg
+	<div class="card card-block">
+		<h4 class="card-title">${3:Card title}</h4>
+		<p class="card-text">${1:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+		<a href="${3:#}" class="card-link">${2:Card link}</a>
+		<a href="${3:#}" class="card-link">${2:Another link}</a>
+	</div>
+endsnippet
+
+# Cards content type Title - Bootstrap 4
+snippet carctt
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">${1:Card title}</h4>
+			<h6 class="card-subtitle text-muted">${2:Support card subtitle}</h6>
+		</div>
+		<img data-src="${3:holder.js/100%x180/?text=Image}" alt="${4:Card image}">
+		<div class="card-block">
+			<p class="card-text">${5:Some quick example text to build on the card title and make up the bulk of the card's content.}</p>
+			<a href="${6:#}" class="card-link">${7:Card link}</a>
+			<a href="${6:#}" class="card-link">${7:Another link}</a>
+		</div>
+	</div>
+endsnippet
+
+# Cards sizing - Bootstrap 4
+snippet carsz
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card card-block">
+				<h3 class="card-title">${1:Special title treatment}</h3>
+				<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+				<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card card-block">
+				<h3 class="card-title">${1:Special title treatment}</h3>
+				<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+				<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Cards sizing w/ Custom width - Bootstrap 4
+snippet carszc
+	<div class="card card-block" style="width: 20rem;">
+		<h3 class="card-title">${1:Special title treatment}</h3>
+		<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+		<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+	</div>
+
+
+# Cards Text alignment - Bootstrap 4
+snippet carta
+	<div class="card card-block">
+		<h4 class="card-title">${1:Special title treatment}</h4>
+		<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+		<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+	</div>
+	<div class="card card-block text-center">
+		<h4 class="card-title">${1:Special title treatment}</h4>
+		<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+		<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+	</div>
+	<div class="card card-block text-right">
+		<h4 class="card-title">${1:Special title treatment}</h4>
+		<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+		<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+	</div>
+endsnippet
+
+# Cards header & footer - Bootstrap 4
+snippet carhf
+	<div class="card">
+		<div class="card-header">
+			Featured
+		</div>
+		<div class="card-block">
+			<h4 class="card-title">${1:Special title treatment}</h4>
+			<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+			<a href="${3:#}" class="btn btn-primary">${4:Go somewhere}</a>
+		</div>
+	</div>
+endsnippet
+
+# Cards header & footer (Quote) - Bootstrap 4
+snippet carhfq
+	<div class="card">
+		<div class="card-header">
+			Quote
+		</div>
+		<div class="card-block">
+			<blockquote class="card-blockquote">
+				<p>${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.}</p>
+				<footer>${2:Someone famous in }<cite title="${3:Source Title}">${3:Source Title}</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+endsnippet
+
+# Cards image caps - Bootstrap 4
+snippet caric
+	<div class="card">
+		<img class="card-img-top" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+		<div class="card-block">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${4:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+			<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${4:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+			<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+		</div>
+		<img class="card-img-bottom" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+	</div>
+endsnippet
+
+# Cards image overlays - Bootstrap 4
+snippet cario
+	<div class="card card-inverse">
+		<img class="card-img" data-src="holder.js/100%x270/#55595c:#373a3c/text:Card image" alt="Card image">
+		<div class="card-img-overlay">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${4:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+			<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+		</div>
+	</div>
+endsnippet
+
+# Cards inverted text - Bootstrap 4
+snippet carit
+	<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+		<div class="card-block">
+			<h3 class="card-title">${1:Special title treatment}</h3>
+			<p class="card-text">${2:With supporting text below as a natural lead-in to additional content.}</p>
+			<a href="${3:#}" class="btn btn-primary">${4:Button}</a>
+		</div>
+	</div>
+endsnippet
+
+# Cards background color - Bootstrap 4
+snippet carbgc
+	<div class="card card-inverse card-${1:primary|success|info|warning|danger} text-center">
+		<div class="card-block">
+			<blockquote class="card-blockquote">
+				<p>${7:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.}</p>
+				<footer>${8:Someone famous in }<cite title="${9:Source Title}">${9:Source Title}</cite></footer>
+			</blockquote>
+		</div>
+	</div>
+endsnippet
+
+# Cards groups - Bootstrap 4
+snippet cargr
+	<div class="card-group">
+		<div class="card">
+			<img class="card-img-top" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+			<div class="card-block">
+				<h4 class="card-title">${3:Card title}</h4>
+				<p class="card-text">${5:This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+				<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+			</div>
+		</div>
+		<div class="card">
+			<img class="card-img-top" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+			<div class="card-block">
+				<h4 class="card-title">${3:Card title}</h4>
+				<p class="card-text">${5:This card has supporting text below as a natural lead-in to additional content.}</p>
+				<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+			</div>
+		</div>
+		<div class="card">
+			<img class="card-img-top" data-src="${1:holder.js/100%x180/}" alt="${2:Card image cap}">
+			<div class="card-block">
+				<h4 class="card-title">${3:Card title}</h4>
+				<p class="card-text">${5:This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.}</p>
+				<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Cards decks - Bootstrap 4
+snippet cardk
+	<div class="card-deck-wrapper">
+		<div class="card-deck">
+			<div class="card">
+				<img class="card-img-top" data-src="${1:holder.js/100%x200/}" alt="${2:Card image cap}">
+				<div class="card-block">
+					<h4 class="card-title">${3:Card title}</h4>
+					<p class="card-text">${5:This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+					<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top" data-src="${1:holder.js/100%x200/}" alt="${2:Card image cap}">
+				<div class="card-block">
+					<h4 class="card-title">${3:Card title}</h4>
+					<p class="card-text">${5:This card has supporting text below as a natural lead-in to additional content.}</p>
+					<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+				</div>
+			</div>
+			<div class="card">
+				<img class="card-img-top" data-src="${1:holder.js/100%x200/}" alt="${2:Card image cap}">
+				<div class="card-block">
+					<h4 class="card-title">${3:Card title}</h4>
+					<p class="card-text">${5:This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.}</p>
+					<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+				</div>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Cards columns - Bootstrap 4
+snippet carcol
+	<div class="card-columns">
+		<div class="card">
+			<img class="card-img-top" data-src="${1:holder.js/100%x160/}" alt="${2:Card image cap}">
+			<div class="card-block">
+				<h4 class="card-title">{4:Card title that wraps to a new line}</h4>
+				<p class="card-text">${5:This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.}</p>
+			</div>
+		</div>
+		<div class="card card-block">
+			<blockquote class="card-blockquote">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer>
+					<small class="text-muted">
+						${8:Someone famous in }<cite title="${9:Source Title}">Source Title</cite>
+					</small>
+				</footer>
+			</blockquote>
+		</div>
+		<div class="card">
+			<img class="card-img-top" data-src="${1:holder.js/100%x160/}" alt="${2:Card image cap}">
+			<div class="card-block">
+				<h4 class="card-title">${3:Card title}</h4>
+				<p class="card-text">${5:This card has supporting text below as a natural lead-in to additional content.}</p>
+				<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+			</div>
+		</div>
+		<div class="card card-block card-inverse card-primary text-center">
+			<blockquote class="card-blockquote">
+				<p>${7:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.}</p>
+				<footer>
+					<small>
+						${8:Someone famous in }<cite title="${9:Source Title}">${9:Source Title}</cite>
+					</small>
+				</footer>
+			</blockquote>
+		</div>
+		<div class="card card-block text-center">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${5:This card has supporting text below as a natural lead-in to additional content.}</p>
+			<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+		</div>
+		<div class="card">
+			<img class="card-img" data-src="${1:holder.js/100%x260/}" alt="${2:Card image}">
+		</div>
+		<div class="card card-block text-right">
+			<blockquote class="card-blockquote">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<footer>
+					<small class="text-muted">
+						${8:Someone famous in }<cite title="${9:Source Title}">${9:Source Title}</cite>
+					</small>
+				</footer>
+			</blockquote>
+		</div>
+		<div class="card card-block">
+			<h4 class="card-title">${3:Card title}</h4>
+			<p class="card-text">${5:This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.}</p>
+			<p class="card-text"><small class="text-muted">${6:Last updated 3 mins ago}</small></p>
+		</div>
+	</div>
+endsnippet
+
+# Cards groups - Bootstrap 4
+snippet cargr
+	<div class="card-group">
+	  <div class="card">
+	    <img class="card-img-top" data-src="..." alt="Card image cap">
+	    <div class="card-block">
+	      <h4 class="card-title">${1:Card title}</h4>
+	      <p class="card-text">${2:Card text}</p>
+	    </div>
+	  </div>
+	</div>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/carousel/#usage
+
+# Carousel
+# Carousel - Bootstrap 4
+snippet caro
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#${3:carousel-example-generic}" data-slide-to="${4:0}" class="active"></li>
+			<li data-target="#${3:carousel-example-generic}" data-slide-to="${4:1}"></li>
+			<li data-target="#${3:carousel-example-generic}" data-slide-to="${4:2}"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<img data-src="${1:holder.js/900x500/auto/#777:#555/text:First slide}" alt="${2:First slide}">
+			</div>
+			<div class="carousel-item">
+				<img data-src="${1:holder.js/900x500/auto/#666:#444/text:Second slide}" alt="${2:Second slide}">
+			</div>
+			<div class="carousel-item">
+				<img data-src="${1:holder.js/900x500/auto/#555:#333/text:Third slide}" alt="${2:Third slide}">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#${5:carousel-example-generic}" role="button" data-slide="prev">
+			<span class="icon-prev" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#${5:carousel-example-generic}" role="button" data-slide="next">
+			<span class="icon-next" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+endsnippet
+
+# Carousel caption - Bootstrap 4
+snippet caroca
+	<div class="carousel-item">
+		<img src="${1:...}" alt="${2:...}">
+		<div class="carousel-caption">
+			<h3>${3:...}</h3>
+			<p>${4:...}</p>
+		</div>
+	</div>
+endsnippet
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/collapse/#usage
+
+# Collapse
+# Collapse - Bootstrap 4
+snippet coll
+	<p>
+		<a class="btn btn-primary" data-toggle="collapse" href="#${1:collapseExample}" aria-expanded="false" aria-controls="${1:collapseExample}">
+			${2:Link with href}
+		</a>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#${1:collapseExample}" aria-expanded="false" aria-controls="${1:collapseExample}">
+			${3:Button with data-target}
+		</button>
+	</p>
+	<div class="collapse" id="${1:collapseExample}">
+		<div class="card card-block">
+			${4:Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.}
+		</div>
+	</div>
+endsnippet
+
+# Collapse accordion - Bootstrap 4
+snippet colla
+	<div id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="${3:headingOne}">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="${2:collapseOne}">
+						${1:Collapsible Group Item #1}
+					</a>
+				</h4>
+			</div>
+			<div id="${2:collapseOne}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="${3:headingOne}">
+				${3:Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="${3:headingTwo}">
+				<h4 class="panel-title">
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="${2:collapseTwo}">
+						${1:Collapsible Group Item #2}
+					</a>
+				</h4>
+			</div>
+			<div id="${2:collapseTwo}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="${3:headingTwo}">
+				${3:Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.}
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="${3:headingThree}">
+				<h4 class="panel-title">
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="${2:collapseThree}">
+						${1:Collapsible Group Item #3}
+					</a>
+				</h4>
+			</div>
+			<div id="${2:collapseThree}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="${3:headingThree}">
+				${3:Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/dropdowns/#usage
+
+# Dropdown
+# Dropdown - Bootstrap 4
+snippet drp
+	<div class="dropdown open">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="${4:dropdownMenu1}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			${3:Dropdown}
+		</button>
+		<div class="dropdown-menu" aria-labelledby="${4:dropdownMenu1}">
+			<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+			<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+		</div>
+	</div>
+endsnippet
+
+# Dropdown button elements - Bootstrap 4
+snippet drpbtn
+	<div class="dropdown open">
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="${3:dropdownMenu1}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			${2:Dropdown}
+		</button>
+		<div class="dropdown-menu" aria-labelledby="${3:dropdownMenu1}">
+			<button class="dropdown-item" type="button">{$1:Action}</button>
+			<button class="dropdown-item" type="button">{$1:Another action}</button>
+			<button class="dropdown-item" type="button">{$1:Something else here}</button>
+		</div>
+	</div>
+endsnippet
+
+# Dropdown Alignement - Bootstrap 4
+snippet drpagm
+	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="${2:dLabel}">
+		${1:...}
+	</div>
+endsnippet
+
+# Dropdown menu header - Bootstrap 4
+snippet drpmh
+	<div class="dropdown-menu">
+		<h6 class="dropdown-header">${3:Dropdown header}</h6>
+		<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+		<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+	</div>
+endsnippet
+
+# Dropdown menu divides - Bootstrap 4
+snippet drpmdv
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+		<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+		<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="${1:#}">${2:Separated link}</a>
+	</div>
+endsnippet
+
+# Dropdown menu disabled - Bootstrap 4
+snippet drpmds
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="${1:#}">${2:Regular link}</a>
+		<a class="dropdown-item disabled" href="${1:#}">${2:Disabled link}</a>
+		<a class="dropdown-item" href="${1:#}">${2:Another link}</a>
+	</div>
+endsnippet
+
+# Forms
+# Form Controls - Bootstrap 4
+snippet form
+	<form>
+		<fieldset class="form-group">
+			<label for="exampleInputEmail1">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="${10:Enter email}">
+			<small class="text-muted">We'll never share your email with anyone else.</small>
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="exampleInputPassword1">Password</label>
+			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="${10:Password}">
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="${1:exampleSelect1}">Example select</label>
+			<select class="form-control" id="e${1:xampleSelect}1">
+				<option>1${2:</o}ption>
+				<option>${2:2}</option>
+				<option>${2:3}</option>
+				<option>${2:4}</option>
+				<option>${2:5}</option>
+			</select>
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="${1:exampleSelect2}">Example multiple select</label>
+			<select multiple class="form-control" id="${1:exampleSelect2}">
+				<option>${2:1}</option>
+				<option>${2:2}</option>
+				<option>${2:3}</option>
+				<option>${2:4}</option>
+				<option>${2:5}</option>
+			</select>
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="exampleTextarea">Example textarea</label>
+			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="exampleInputFile">File input</label>
+			<input type="file" class="form-control-file" id="exampleInputFile">
+			<small class="text-muted">This is some placeholder b${10:lock-level help text for the above input. It's a bit lighter and easily wraps to a new line.</smal}l>
+		</fieldset>
+		<div class="radio">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				Option one is this and that&mdash;be sure to include why it's great
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				Option two can be something else and selecting it will deselect option one
+			</label>
+		</div>
+		<div class="radio disabled">
+			<label>
+				<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+				Option three is disabled
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Check me out
+			</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+endsnippet
+
+# Form group - Bootstrap 4
+snippet formgr
+	<form>
+		<fieldset class="form-group">
+			<label for="formGroupExampleInput">Example label</label>
+			<input type="text" class="form-control" id="formGroupExampleInput" placeholder="${10:Example input}">
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="formGroupExampleInput2">Another label</label>
+			<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="${10:Another input}">
+		</fieldset>
+	</form>
+endsnippet
+
+# Form inline - Bootstrap 4
+snippet formin
+	<form class="form-inline">
+		<div class="form-group">
+			<label for="${1:exampleInputName2}">Name</label>
+			<input type="text" class="form-control" id="${1:exampleInputName2}" placeholder="${10:Jane Doe}">
+		</div>
+		<div class="form-group">
+			<label for="${2:exampleInputEmail2}">Email</label>
+			<input type="email" class="form-control" id="${2:exampleInputEmail2}" placeholder="${10:jane.doe@example.com}">
+		</div>
+		<button type="submit" class="btn btn-primary">Send invitation</button>
+	</form>
+endsnippet
+
+# Form hidden label - Bootstrap 4
+snippet formhl
+	<div class="form-group">
+		<label class="sr-only" for="${1:exampleInputEmail3}">Email address</label>
+		<input type="email" class="form-control" id="${1:exampleInputEmail3}" placeholder="${10:Enter email}">
+	</div>
+endsnippet
+
+# Form w/ Grid - Bootstrap 4
+snippet formgrid
+	<form>
+		<div class="form-group row">
+			<label for="${1:inputEmail3}" class="col-sm-2 form-control-label">Email</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="${1:inputEmail3}" placeholder="${10:Email}">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="${4:inputPassword3}" class="col-sm-2 form-control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="${4:inputPassword3}" placeholder="${10:Password}">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2">Radios</label>
+			<div class="col-sm-10">
+				<div class="radio">
+					<label>
+						<input type="radio" name="gridRadios" id="${5:gridRadios1}" value="${6:option1}" checked>
+						${7:Option one is this and that&mdash;be sure to include why it's great}
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="gridRadios" id="${5:gridRadios2}" value="${6:option2}">
+						${7:Option two can be something else and selecting it will deselect option one}
+					</label>
+				</div>
+				<div class="radio disabled">
+					<label>
+						<input type="radio" name="gridRadios" id="${5:gridRadios3}" value="${6:option3}" disabled>
+						${7:Option three is disabled}
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2">Checkbox</label>
+			<div class="col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Check me out
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-secondary">Sign in</button>
+			</div>
+		</div>
+	</form>
+endsnippet
+
+# Form Checkbox - Bootstrap 4
+snippet formcb
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" value="">
+			${1:Option one is this and that&mdash;be sure to include why it's great}
+		</label>
+	</div>
+	<div class="checkbox disabled">
+		<label>
+			<input type="checkbox" value="" disabled>
+			${1:Option two is disabled}
+		</label>
+	</div>
+endsnippet
+
+# Form Checkbox inline - Bootstrap 4
+snippet formcbin
+	<label class="checkbox-inline">
+		<input type="checkbox" id="${1:inlineCheckbox1}" value="${2:option1}"> ${3:1}
+	</label>
+	<label class="checkbox-inline">
+		<input type="checkbox" id="${1:inlineCheckbox2}" value="${2:option2}"> ${3:2}
+	</label>
+	<label class="checkbox-inline">
+		<input type="checkbox" id="${1:inlineCheckbox3}" value="${2:option3}"> ${3:3}
+	</label>
+endsnippet
+
+# Form Checkbox w/o label - Bootstrap 4
+snippet formcbwola
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" id="${1:blankCheckbox}" value="${2:option1}">
+		</label>
+	</div>
+endsnippet
+
+# Form Radio - Bootstrap 4
+snippet formra
+	<div class="radio">
+		<label>
+			<input type="radio" name="${1:exampleRadios}" id="${2:exampleRadios1}" value="${3:option1}" checked>
+			${4:Option one is this and that&mdash;be sure to include why it's great}
+		</label>
+	</div>
+	<div class="radio">
+		<label>
+			<input type="radio" name="${1:exampleRadios}" id="${2:exampleRadios2}" value="${3:option2}">
+			${4:Option two can be something else and selecting it will deselect option one}
+		</label>
+	</div>
+	<div class="radio disabled">
+		<label>
+			<input type="radio" name="${1:exampleRadios}" id="${2:exampleRadios3}" value="${3:option3}" disabled>
+			${4:Option three is disabled}
+		</label>
+	</div>
+endsnippet
+
+# Form Radio inline - Bootstrap 4
+snippet formrain
+	<label class="radio-inline">
+		<input type="radio" name="${1:inlineRadioOptions}" id="${2:inlineRadio1}" value="${3:option1}"> ${3:1}
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="${1:inlineRadioOptions}" id="${2:inlineRadio2}" value="${3:option2}"> ${3:2}
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="${1:inlineRadioOptions}" id="${2:inlineRadio3}" value="${3:option3}"> ${3:3}
+	</label>
+endsnippet
+
+# Form Radio w/o label - Bootstrap 4
+snippet formrawola
+	<div class="radio">
+		<label>
+			<input type="radio" name="${1:blankRadio}" id="${2:blankRadio1}" value="option1">
+		</label>
+	</div>
+endsnippet
+
+# Form Static Controls - Bootstrap 4
+snippet formsc
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">email@example.com</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="${1:inputPassword}" class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="${1:inputPassword}" placeholder="${10:Password}">
+			</div>
+		</div>
+	</form>
+endsnippet
+
+# Form Static Controls inline - Bootstrap 4
+snippet formscin
+	<form class="form-inline">
+		<div class="form-group">
+			<label class="sr-only">Email</label>
+			<p class="form-control-static">email@example.com</p>
+		</div>
+		<div class="form-group">
+			<label for="${1:inputPassword2}" class="sr-only">Password</label>
+			<input type="password" class="form-control" id="${1:inputPassword2}" placeholder="${10:Password}">
+		</div>
+		<button type="submit" class="btn btn-primary">Confirm identity</button>
+	</form>
+endsnippet
+
+# Form disabled state - Bootstrap 4
+snippet formdis
+	<form>
+		<fieldset disabled>
+			<div class="form-group">
+				<label for="disabledTextInput">Disabled input</label>
+				<input type="text" id="disabledTextInput" class="form-control" placeholder="${10:Disabled input}">
+			</div>
+			<div class="form-group">
+				<label for="disabledSelect">Disabled select menu</label>
+				<select id="disabledSelect" class="form-control">
+					<option>${1:Disabled select}</option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Can't check this
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</fieldset>
+	</form>
+endsnippet
+
+# Form Readonly - Bootstrap 4
+snippet formreo
+	<input class="form-control" type="text" placeholder="${10:Readonly input here…" readonl}y>
+endsnippet
+
+# Form input sizing - Bootstrap 4
+snippet formiptsz
+	<input class="form-control form-control-lg" type="text" placeholder="${10:.input-lg}">
+	<input class="form-control" type="text" placeholder="${10:Default input}">
+	<input class="form-control form-control-sm" type="text" placeholder="${10:.input-sm}">
+endsnippet
+
+# Form select sizing - Bootstrap 4
+snippet formsltsz
+	<select class="form-control form-control-lg"></select>
+	<select class="form-control"></select>
+	<select class="form-control form-control-sm"></select>
+endsnippet
+
+# Form column sizing - Bootstrap 4
+snippet formcolsz
+	<div class="row">
+		<div class="col-xs-2">
+			<input type="text" class="form-control" placeholder="${10:.col-xs-2}">
+		</div>
+		<div class="col-xs-3">
+			<input type="text" class="form-control" placeholder="${10:.col-xs-3}">
+		</div>
+		<div class="col-xs-4">
+			<input type="text" class="form-control" placeholder="${10:.col-xs-4}">
+		</div>
+	</div>
+endsnippet
+
+# Form Help text - Bootstrap 4
+snippet formht
+	<small class="text-muted">
+		Some inline text with a small tag looks like this.
+	</small>
+endsnippet
+
+# Form Validation - Bootstrap 4
+snippet formval
+	<div class="form-group has-success">
+		<label class="control-label" for="inputSuccess1">Input with success</label>
+		<input type="text" class="form-control form-control-success" id="inputSuccess1">
+	</div>
+	<div class="form-group has-warning">
+		<label class="control-label" for="inputWarning1">Input with warning</label>
+		<input type="text" class="form-control form-control-warning" id="inputWarning1">
+	</div>
+	<div class="form-group has-error">
+		<label class="control-label" for="inputError1">Input with error</label>
+		<input type="text" class="form-control form-control-error" id="inputError1">
+	</div>
+	<div class="has-success">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="checkboxSuccess" value="option1">
+				Checkbox with success
+			</label>
+		</div>
+	</div>
+	<div class="has-warning">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="checkboxWarning" value="option1">
+				Checkbox with warning
+			</label>
+		</div>
+	</div>
+	<div class="has-error">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" id="checkboxError" value="option1">
+				Checkbox with error
+			</label>
+		</div>
+	</div>
+endsnippet
+
+# Form Custom checkbox - Bootstrap 4
+snippet formctmcb
+	<label class="c-input c-checkbox">
+		<input type="checkbox">
+		<span class="c-indicator"></span>
+		Check this custom checkbox
+	</label>
+endsnippet
+
+# Form Custom radio - Bootstrap 4
+snippet formctmra
+	<label class="c-input c-radio">
+		<input id="radio1" name="radio" type="radio">
+		<span class="c-indicator"></span>
+		Toggle this custom radio
+	</label>
+	<label class="c-input c-radio">
+		<input id="radio2" name="radio" type="radio">
+		<span class="c-indicator"></span>
+		Or toggle this other custom radio
+	</label>
+endsnippet
+
+# Form Custom radio stacked - Bootstrap 4
+snippet formctmras
+	<div class="c-inputs-stacked">
+		<label class="c-input c-radio">
+			<input id="radioStacked1" name="radio-stacked" type="radio">
+			<span class="c-indicator"></span>
+			Toggle this custom radio
+		</label>
+		<label class="c-input c-radio">
+			<input id="radioStacked2" name="radio-stacked" type="radio">
+			<span class="c-indicator"></span>
+			Or toggle this other custom radio
+		</label>
+	</div>
+endsnippet
+
+# Form Custom select menu - Bootstrap 4
+snippet formctmsm
+	<select class="c-select">
+		<option selected>Open this select menu</option>
+		<option value="1">One</option>
+		<option value="2">Two</option>
+		<option value="3">Three</option>
+	</select>
+endsnippet
+
+# Form Custom File browser - Bootstrap 4
+snippet formctmfb
+	<label class="file">
+		<input type="file" id="file">
+		<span class="file-custom"></span>
+	</label>
+endsnippet
+
+# Input Group
+# Input Group - Bootstrap 4
+snippet iptg
+	<div class="input-group">
+		<span class="input-group-addon" id="${2:basic-addon1}">@</span>
+		<input type="text" class="form-control" placeholder="${1:Username}" aria-describedby="${2:basic-addon1}">
+	</div>
+	<br>
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="${1:Recipient's username}" aria-describedby="${2:basic-addon2}">
+		<span class="input-group-addon" id="${2:basic-addon2}">.00</span>
+	</div>
+	<br>
+	<label for="basic-url">${3:Your vanity URL}</label>
+	<div class="input-group">
+		<span class="input-group-addon" id="${2:basic-addon3}">https://example.com/users/</span>
+		<input type="text" class="form-control" id="basic-url" aria-describedby="${2:basic-addon3}">
+	</div>
+	<br>
+	<div class="input-group">
+		<span class="input-group-addon">$</span>
+		<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+		<span class="input-group-addon">.00</span>
+	</div>
+endsnippet
+
+# Input Group Sizing - Bootstrap 4
+snippet iptgsz
+	<div class="input-group input-group-lg">
+		<span class="input-group-addon" id="sizing-addon1">@</span>
+		<input type="text" class="form-control" placeholder="${1:Username}" aria-describedby="sizing-addon1">
+	</div>
+	<br>
+	<div class="input-group">
+		<span class="input-group-addon" id="sizing-addon2">@</span>
+		<input type="text" class="form-control" placeholder="${1:Username}" aria-describedby="sizing-addon2">
+	</div>
+	<br>
+	<div class="input-group input-group-sm">
+		<span class="input-group-addon" id="sizing-addon3">@</span>
+		<input type="text" class="form-control" placeholder="${1:Username}" aria-describedby="sizing-addon3">
+	</div>
+endsnippet
+
+# Checkboxes and radio addons - Bootstrap 4
+snippet iptgadd
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<input type="checkbox" aria-label="${1:Checkbox for following text input}">
+				</span>
+				<input type="text" class="form-control" aria-label="${1:Text input with checkbox}">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<input type="radio" aria-label="${1:Radio button for following text input}">
+				</span>
+				<input type="text" class="form-control" aria-label="${1:Text input with radio button}">
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Buttons addons - Bootstrap 4
+snippet iptbtnadd
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button class="btn btn-secondary" type="button">Go!</button>
+				</span>
+				<input type="text" class="form-control" placeholder="${1:Search for...}">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="${1:Search for...}">
+				<span class="input-group-btn">
+					<button class="btn btn-secondary" type="button">Go!</button>
+				</span>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Buttons w/ dropdowns - Bootstrap 4
+snippet iptbtnwdd
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Action
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+						<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+						<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+						<div role="separator" class="dropdown-divider"></div>
+						<a class="dropdown-item" href="${1:#}">${2:Separated link}</a>
+					</div>
+				</div>
+				<input type="text" class="form-control" aria-label="${1:Text input with dropdown button}">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="input-group">
+				<input type="text" class="form-control" aria-label="${1:Text input with dropdown button}">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Action
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="${1:#}">${2:Action}</a>
+						<a class="dropdown-item" href="${1:#}">${2:Another action}</a>
+						<a class="dropdown-item" href="${1:#}">${2:Something else here}</a>
+						<div role="separator" class="dropdown-divider"></div>
+						<a class="dropdown-item" href="${1:#}">${2:Separated link}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Segmented buttons - Bootstrap 4
+snippet iptbtnseg
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Action
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="${2:#}">${3:Action}</a>
+						<a class="dropdown-item" href="${2:#}">${3:Another action}</a>
+						<a class="dropdown-item" href="${2:#}">${3:Something else here}</a>
+						<div role="separator" class="dropdown-divider"></div>
+						<a class="dropdown-item" href="${2:#}">${3:Separated link}</a>
+					</div>
+				</div>
+				<input type="text" class="form-control" aria-label="${1:Text input with dropdown button}">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="input-group">
+				<input type="text" class="form-control" aria-label="${1:Text input with dropdown button}">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Action
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="${2:#}">${3:Action}</a>
+						<a class="dropdown-item" href="${2:#}">${3:Another action}</a>
+						<a class="dropdown-item" href="${2:#}">${3:Something else here}</a>
+						<div role="separator" class="dropdown-divider"></div>
+						<a class="dropdown-item" href="${2:#}">${3:Separated link}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Jumbotron
+# Jumbotron - Bootstrap 4
+snippet jum
+	<div class="jumbotron">
+		<h1 class="display-3">${1:Hello, world!}</h1>
+		<p class="lead">${2:This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.}</p>
+		<hr class="m-y-md">
+		<p>${3:It uses utility classes for typography and spacing to space content out within the larger container.}</p>
+		<p class="lead">
+			<a class="btn btn-primary btn-lg" href="#" role="button">${4:Learn more}</a>
+		</p>
+	</div>
+endsnippet
+
+# Fluid Jumbotron - Bootstrap 4
+snippet jumf
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-3">${1:Fluid jumbotron}</h1>
+			<p class="lead">${2:This is a modified jumbotron that occupies the entire horizontal space of it's parent.}</p>
+		</div>
+	</div>
+endsnippet
+# Labels
+# Label - Bootstrap 4
+snippet lab
+	<span class="label label-default">$1</span>
+endsnippet
+
+# Label heading example - Bootstrap 4
+snippet labex
+	<h1>${2:Example heading <span class="label label-default">${1:New}</span>}</h1>
+	<h2>${2:Example heading <span class="label label-default">${1:New}</span>}</h2>
+	<h3>${2:Example heading <span class="label label-default">${1:New}</span>}</h3>
+	<h4>${2:Example heading <span class="label label-default">${1:New}</span>}</h4>
+	<h5>${2:Example heading <span class="label label-default">${1:New}</span>}</h5>
+	<h6>${2:Example heading <span class="label label-default">${1:New}</span>}</h6>
+endsnippet
+
+# Label context - Bootstrap 4
+snippet labco
+	<span class="label label-${1:default|primary|success|info|warning|danger}">$2</span>
+endsnippet
+
+# Label pill - Bootstrap 4
+snippet labpi
+	<span class="label label-pill label-${1:default|primary|success|info|warning|danger}">$2</span>
+endsnippet
+
+# Lists
+# List - Bootstrap 4
+snippet lis
+	<ul class="list-group">
+		<li class="list-group-item">${1:Cras justo odio}</li>
+		<li class="list-group-item">${1:Dapibus ac facilisis in}</li>
+		<li class="list-group-item">${1:Morbi leo risus}</li>
+	</ul>
+endsnippet
+
+# List label - Bootstrap 4
+snippet lisla
+	<ul class="list-group">
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">${1:14}</span>
+			${2:Cras justo odio}
+		</li>
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">${1:2}</span>
+			${2:Dapibus ac facilisis in}
+		</li>
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">${1:1}</span>
+			${2:Morbi leo risus}
+		</li>
+	</ul>
+endsnippet
+
+# List linked - Bootstrap 4
+snippet lisli
+	<div class="list-group">
+		<a href="#" class="list-group-item active">${1:Cras justo odio}</a>
+		<a href="#" class="list-group-item">${1:Dapibus ac facilisis in}</a>
+		<a href="#" class="list-group-item">${1:Morbi leo risus}</a>
+	</div>
+endsnippet
+
+# List button - Bootstrap 4
+snippet lisbtn
+	<div class="list-group">
+		<button type="button" class="list-group-item">${1:Cras justo odio}</button>
+		<button type="button" class="list-group-item">${1:Dapibus ac facilisis in}</button>
+		<button type="button" class="list-group-item">${1:Morbi leo risus}</button>
+	</div>
+endsnippet
+
+# List disabled items - Bootstrap 4
+snippet lisdis
+	<div class="list-group">
+		<a href="#" class="list-group-item disabled">${1:Cras justo odio}</a>
+		<a href="#" class="list-group-item">${1:Dapibus ac facilisis in}</a>
+		<a href="#" class="list-group-item">${1:Morbi leo risus}</a>
+	</div>
+endsnippet
+
+# List context - Bootstrap 4
+snippet lisco
+	<ul class="list-group">
+		<li class="list-group-item list-group-item-${1:success|info|warning|danger}">${2:Dapibus ac facilisis in}</li>
+	</ul>
+endsnippet
+
+# List context (div -> a href...) - Bootstrap 4
+snippet liscoa
+	<div class="list-group">
+		<a href="#" class="list-group-item list-group-item-${1:success|info|warning|danger}">${2:Dapibus ac facilisis in}</a>
+	</div>
+endsnippet
+
+# List custom content - Bootstrap 4
+snippet liscc
+	<div class="list-group">
+		<a href="${3:#}" class="list-group-item active">
+			<h4 class="list-group-item-heading">${1:List group item heading}</h4>
+			<p class="list-group-item-text">${2:Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.}</p>
+		</a>
+		<a href="${3:#}" class="list-group-item">
+			<h4 class="list-group-item-heading">${1:List group item heading}</h4>
+			<p class="list-group-item-text">${2:Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.}</p>
+		</a>
+		<a href="${3:#}" class="list-group-item">
+			<h4 class="list-group-item-heading">${1:List group item heading}</h4>
+			<p class="list-group-item-text">${2:Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.}</p>
+		</a>
+	</div>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/modal/#usage
+
+# Modals
+# Modal - Bootstrap 4
+snippet mod
+	<div class="modal fade" id="${3:modal-1}">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">${1:Modal title}</h4>
+				</div>
+				<div class="modal-body">
+					<p>${2:One fine body&hellip;}</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+endsnippet
+
+# Modal sizes- Bootstrap 4
+snippet modsz
+	<div class="modal fade" id="${3:bd-example-modal}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-${1:lg|sm}">
+			<div class="modal-content">
+				${2:...}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Modal grid- Bootstrap 4
+snippet modgr
+	<div id="${4:gridSystemModal}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="gridModalLabel">${1:Modal title}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-4">${2:.col-md-4}</div>
+						<div class="col-md-4 col-md-offset-4">${2:.col-md-4 .col-md-offset-4}</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-md-offset-3">${2:.col-md-3 .col-md-offset-3}</div>
+						<div class="col-md-2 col-md-offset-4">${2:.col-md-2 .col-md-offset-4}</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">${2:.col-md-6 .col-md-offset-3}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-9">
+							${2:Level 1: .col-sm-9}
+							<div class="row">
+								<div class="col-xs-8 col-sm-6">
+									${3:Level 2: .col-xs-8 .col-sm-6}
+								</div>
+								<div class="col-xs-4 col-sm-6">
+									${3:Level 2: .col-xs-4 .col-sm-6}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bd-example bd-example-padded-bottom">
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#${4:gridSystemModal}">
+			${5:Launch demo modal}
+		</button>
+	</div>
+endsnippet
+
+# Modal content based- Bootstrap 4
+snippet modcb
+	<div class="bd-example">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							<span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="exampleModalLabel">${1:New message}</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="recipient-name" class="control-label">Recipient:</label>
+								<input type="text" class="form-control" id="recipient-name">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="control-label">Message:</label>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send message</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# Modal content based- Bootstrap 4
+snippet modbtn
+	<button class="btn btn-primary" data-toggle="modal" data-target="#${1:bd-example-modal}">${2:Large modal}</button>
+endsnippet
+
+# Navbars
+# Navbar - Bootstrap 4
+snippet nvb
+	<nav class="navbar navbar-light bg-faded">
+		<a class="navbar-brand" href="${3:#}">{4:Navbar}</a>
+		<ul class="nav navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="${1:#}">${2:Home} <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="${1:#}">${2:Features}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="${1:#}">${2:Pricing}</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="${1:#}">${2:About}</a>
+			</li>
+		</ul>
+		<form class="form-inline navbar-form pull-right">
+			<input class="form-control" type="text" placeholder="Search">
+			<button class="btn btn-success-outline" type="submit">Search</button>
+		</form>
+	</nav>
+endsnippet
+
+# Navbar color - Bootstrap 4
+snippet nvbc
+	<nav class="navbar navbar-${1:dark|light} bg-${2:inverse|primary} ${3:style="background-color: #e3f2fd;"}">
+		${4:<!-- Navbar content -->}
+	</nav>
+endsnippet
+
+# Navbar container out - Bootstrap 4
+snippet nvbconout
+	<div class="container">
+		<nav class="navbar navbar-light bg-faded">
+			<a class="navbar-brand" href="${1:#}">${2:Navbar}</a>
+		</nav>
+	</div>
+endsnippet
+
+# Navbar container in - Bootstrap 4
+snippet nvbconin
+	<nav class="navbar navbar-light bg-faded">
+		<div class="container">
+			<a class="navbar-brand" href="${1:#}">${2:Navbar}</a>
+		</div>
+	</nav>
+endsnippet
+
+# Navbar fixed top - Bootstrap 4
+snippet nvbft
+	<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+		<a class="navbar-brand" href="${1:#}">${2:Fixed top}</a>
+	</nav>
+endsnippet
+
+# Navbar fixed bottom - Bootstrap 4
+snippet nvbfb
+	<nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+		<a class="navbar-brand" href="${1:#}">${2:Fixed bottom}</a>
+	</nav>
+endsnippet
+
+# Navbar collapse - Bootstrap 4
+snippet nvbclp
+	<div class="collapse" id="${1:exCollapsingNavbar}">
+		<div class="bg-inverse p-a">
+			<h4>${2:Collapsed content}</h4>
+			<span class="text-muted">${3:Toggleable via the navbar brand.}</span>
+		</div>
+	</div>
+	<nav class="navbar navbar-light bg-faded">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#${1:exCollapsingNavbar}">
+			&#9776;
+		</button>
+	</nav>
+endsnippet
+
+# Navbar toggler - Bootstrap 4
+snippet nvbtg
+	<nav class="navbar navbar-light bg-faded">
+		<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#${1:exCollapsingNavbar2}">
+			&#9776;
+		</button>
+		<div class="collapse navbar-toggleable-xs" id="${1:exCollapsingNavbar2}">
+			<a class="navbar-brand" href="#">Responsive navbar</a>
+			<ul class="nav navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="${2:#}">${3:Home} <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${2:#}">${3:Features}</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${2:#}">${3:Pricing}</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="${2:#}">${3:About}</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/navs/#javascript-behavior
+
+# Navs
+# Nav - Bootstrap 4
+snippet nav
+	<ul class="nav">
+		<li class="nav-item">
+			<a class="nav-link" href="${1:#}">${2:Link}</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="${1:#}">${2:Link}</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="${1:#}">${2:Another link}</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link disabled" href="${1:#}">${3:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Nav inline - Bootstrap 4
+snippet navin
+	<nav class="nav">
+		<a class="nav-link active" href="${1:#}">${2:Active}</a>
+		<a class="nav-link" href="${1:#}">${2:Link}</a>
+		<a class="nav-link" href="${1:#}">${2:Another link}</a>
+		<a class="nav-link disabled" href="${1:#}">${3:Disabled}</a>
+	</nav>
+endsnippet
+
+# Nav tabs - Bootstrap 4
+snippet navtb
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link active">${2:Active}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Another link}</a>
+		</li>
+		<li class="nav-item disabled">
+			<a href="${1:#}" class="nav-link">${3:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Nav pills - Bootstrap 4
+snippet navpl
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link active">${2:Active}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Another link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link disabled">${3:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Nav pills stacked - Bootstrap 4
+snippet navplsk
+	<ul class="nav nav-pills nav-stacked">
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link active">${2:Active}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Another link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link disabled">${3:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Nav tabs w/ dropdown - Bootstrap 4
+snippet navtbdd
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link active">${2:Active}</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="${3:#}">${4:Action}</a>
+				<a class="dropdown-item" href="${3:#}">${4:Another action}</a>
+				<a class="dropdown-item" href="${3:#}">${4:Something else here}</a>
+				${5:<div class="dropdown-divider"></div>}
+				<a class="dropdown-item" href="${3:#}">${4:Separated link}</a>
+			</div>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Another link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link disabled">${2:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Nav pills w/ dropdown - Bootstrap 4
+snippet navpldd
+	<ul class="nav nav-pills">
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link active">${2:Active}</a>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="${3:#}" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="${3:#}">${4:Action}</a>
+				<a class="dropdown-item" href="${3:#}">${4:Another action}</a>
+				<a class="dropdown-item" href="${3:#}">${4:Something else here}</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="${3:#}">${4:Separated link}</a>
+			</div>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link">${2:Another link}</a>
+		</li>
+		<li class="nav-item">
+			<a href="${1:#}" class="nav-link disabled">${2:Disabled}</a>
+		</li>
+	</ul>
+endsnippet
+
+# Pagination
+# Pagination - Bootstrap 4
+snippet pag
+	<nav>
+		<ul class="pagination">
+			<li>
+				<a href="${3:#}" aria-label="${4:Previous}">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">${4:Previous}</span>
+				</a>
+			</li>
+			<li><a href="${1:#}">1</a></li>
+			<li><a href="${1:#}">2</a></li>
+			<li><a href="${1:#}">3</a></li>
+			${2:<li><a href="${1:#}">4</a></li>
+			<li><a href="${1:#}">5</a></li>}
+			<li>
+				<a href="${3:#}" aria-label="${4:Next}">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">${4:Next}</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+endsnippet
+
+# Pagination Disabled and active states - Bootstrap 4
+snippet pagda
+	<nav>
+		<ul class="pagination">
+			<li class="disabled">
+				<a href="${1:#}" aria-label="${2:Previous}">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">${2:Previous}</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="${1:#}">1 <span class="sr-only">(current)</span></a>
+			</li>
+			<li><a href="${1:#}">2</a></li>
+			<li><a href="${1:#}">3</a></li>
+			<li><a href="${1:#}">4</a></li>
+			<li><a href="${1:#}">5</a></li>
+			<li>
+				<a href="${1:#}" aria-label="${3:Next}">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">${3:Next}</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+endsnippet
+
+# Pagination - Bootstrap 4
+snippet pagsz
+	<nav>
+		<ul class="pagination pagination-${1:lg|sm}">
+			<li>
+				<a href="${1:#}" aria-label="${2:Previous}">
+					<span aria-hidden="true">&laquo;</span>
+					<span class="sr-only">${2:Previous}</span>
+				</a>
+			</li>
+			<li><a href="${1:#}">1</a></li>
+			<li><a href="${1:#}">2</a></li>
+			<li><a href="${1:#}">3</a></li>
+			<li>
+				<a href="${1:#}" aria-label="${3:Next}">
+					<span aria-hidden="true">&raquo;</span>
+					<span class="sr-only">${3:Next}</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+endsnippet
+
+# Pagination pager - Bootstrap 4
+snippet pager
+	<nav>
+		<ul class="pager">
+			<li><a href="${1:#}">Previous</a></li>
+			<li><a href="${1:#}">Next</a></li>
+		</ul>
+	</nav>
+endsnippet
+
+# Pagination pager aligned - Bootstrap 4
+snippet pageral
+	<nav>
+		<ul class="pager">
+			<li class="pager-prev"><a href="${1:#}">Older</a></li>
+			<li class="pager-next"><a href="${1:#}">Newer</a></li>
+		</ul>
+	</nav>
+endsnippet
+
+# Pagination pager aligned & disabled - Bootstrap 4
+snippet pagerald
+	<nav>
+		<ul class="pager">
+			<li class="pager-prev disabled"><a href="${1:#}">Older</a></li>
+			<li class="pager-next"><a href="${1:#}">Newer</a></li>
+		</ul>
+	</nav>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/popover/#usage
+
+# Popover
+# Popover - Bootstrap 4
+snippet pop
+	<button type="button" class="btn btn-lg btn-danger bd-popover" data-toggle="popover" title="${2:Popover title}" data-content="${3:And here's some amazing content. It's very engaging. Right?}">${1:Click to toggle popover}</button>
+endsnippet
+
+# Popover direction - Bootstrap 4
+snippet popdi
+	<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="${1:top|right|bottom|left}" data-content="${2:Vivamus sagittis lacus vel augue laoreet rutrum faucibus.}">
+		${3:Popover on ${1:top|right|bottom|left}}
+	</button>
+endsnippet
+# Progress bars
+# Progress - Bootstrap 4
+snippet pro
+	<progress class="progress" value="${1:10}" max="100">$2</progress>
+endsnippet
+
+# Progress context - Bootstrap 4
+snippet proco
+	<progress class="progress progress-${1:success|info|warning|danger}" value="${2:25}" max="100">${2:25}%</progress>
+endsnippet
+
+# Progress striped - Bootstrap 4
+snippet procost
+	<progress class="progress progress-striped progress-${1:success|info|warning|danger}" value="${2:25}" max="100">${2:25}%</progress>
+endsnippet
+
+# Progress - Bootstrap 4
+snippet prostan
+	<progress class="progress progress-striped progress-animated" value="${1:10}" max="100">$2</progress>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/scrollspy/#usage
+
+# Scrollspy
+# Scrollspy - Bootstrap 4
+snippet scr
+	<body data-spy="scroll" data-target="#${1:navbar-example}">
+		${2:...}
+		<div id="${1:navbar-example}">
+			<ul class="nav nav-tabs" role="tablist">
+				${3:...}
+			</ul>
+		</div>
+		${2:...}
+	</body>
+endsnippet
+
+# TODO: Add Usage form http://v4-alpha.getbootstrap.com/components/tooltip/#usage
+
+# Tooltip
+# Tooltip - Bootstrap 4
+snippet too
+	<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="${1:top|right|bottom|left}" title="Tooltip on ${1:top|right|bottom|left}">
+	  ${2:Tooltip on ${1:top|right|bottom|left}}
+	</button>
+endsnippet
+
+# Utilities
+# Text alignment - Bootstrap 4
+snippet texta
+	<p class="text-${1:left|center|right|justify|nowrap}">$2</p>
+endsnippet
+
+# Text transform - Bootstrap 4
+snippet textt
+	<p class="text-${1:lowercase|uppercase|capitalize}">${2:${1:Lowercased|Uppercased|Capitalized} text.}</p>
+endsnippet
+
+# Text context colors - Bootstrap 4
+snippet textcol
+	<p class="text-${1:muted|primary|success|info|warning|danger}">${2:Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.}</p>
+endsnippet
+
+# Text context background colors - Bootstrap 4
+snippet textbgcol
+	<p class="bg-${1:muted|primary|success|info|warning|danger}">${2:Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.}</p>
+endsnippet
+
+# Close icon - Bootstrap 4
+snippet cloi
+	<button type="button" class="close" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		<span class="sr-only">${1:Close}</span>
+	</button>
+endsnippet
+
+# Center block - Bootstrap 4
+snippet cenb
+	<div class="center-block">${1:Centered block}</div>
+endsnippet
+
+# Clearfix - Bootstrap 4
+snippet cle
+	<div class="clearfix">${1:...}</div>
+endsnippet
+
+# Hidden content - Bootstrap 4
+snippet hid
+	<input type="text" hidden>
+endsnippet
+
+# Invisible content - Bootstrap 4
+snippet inv
+	<div class="invisible">${1:...}</div>
+endsnippet
+
+# Screen reader - Bootstrap 4
+snippet sro
+	<a class="sr-only sr-only-focusable" href="${2:#content}">${1:Skip to main content}</a>
+endsnippet
+
+# Image replacement - Bootstrap 4
+snippet imgre
+	<h1 class="text-hide">${1:Custom heading}</h1>
+endsnippet
+
+# Responsive embeds - Bootstrap 4
+snippet emb
+	${3:<!-- 21:9 | 16:9 | 4:3 aspect ratio -->}
+	<div class="embed-responsive embed-responsive-${1:21by9|16by9|4by3}">
+		<iframe class="embed-responsive-item" src="${2:...}"></iframe>
+	</div>
+endsnippet
+
+# Figures
+# Figure - Bootstrap 4
+snippet fig
+	<figure class="figure">
+	  <img data-src="$1" class="img-rounded" alt="$2">
+	  <figcaption class="figure-caption">$3</figcaption>
+	</figure>
+endsnippet
+
+# Images
+# Responsive Image - Bootstrap 4
+snippet imgr
+	<img src="$1" class="img-fluid" alt="$2">
+endsnippet
+
+# Image Rounded - Bootstrap 4
+snippet imgro
+	<img src="$1" alt="$2" class="img-rounded">
+endsnippet
+
+# Image Circle - Bootstrap 4
+snippet imgci
+	<img src="$1" alt="$2" class="img-circle">
+endsnippet
+
+# Image Thumbnail - Bootstrap 4
+snippet imgth
+	<img src="$1" alt="$2" class="img-thumbnail">
+endsnippet
+
+# Image Left - Bootstrap 4
+snippet imgl
+	<img src="$1" alt="$2" class="img-rounded pull-left">
+endsnippet
+
+# Image Right - Bootstrap 4
+snippet imgr
+	<img src="$1" alt="$2" class="img-rounded pull-right">
+endsnippet
+
+# Image Center - Bootstrap 4
+snippet imgce
+	<img src="$1" alt="$2" class="img-rounded center-block">
+endsnippet
+
+
+# Tables
+# Table - Bootstrap 4
+snippet tab
+	<table class="table">
+		<thead>
+			<tr>
+				<th>$1</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>$2</td>
+			</tr>
+		</tbody>
+	</table>
+endsnippet
+
+# Tables (full option) - Bootstrap 4
+snippet tabs
+	<table class="table table-${1:inverse|reflow|striped|bordered|hover|sm}">
+		<thead>
+			<tr>
+				${2:<th>#</th>}
+				${3:<th>First Name</th>}
+				${3:<th>Last Name</th>}
+				${3:<th>Username</th>}
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				${2:<th scope="row">1</th>}
+				${3:<td>Mark</td>}
+				${3:<td>Otto</td>}
+				${3:<td>@mdo</td>}
+			</tr>
+			${4:<tr>
+				${2:<th scope="row">2</th>}
+				${3:<td>Jacob</td>}
+				${3:<td>Thornton</td>}
+				${3:<td>@fat</td>}
+			</tr>
+			<tr>
+				${2:<th scope="row">3</th>}
+				${3:<td>Larry</td>}
+				${3:<td>the Bird</td>}
+				${3:<td>@twitter</td>}
+			</tr>}
+		</tbody>
+	</table>
+endsnippet
+
+# Tables Head Inverse - Bootstrap 4
+snippet tabhin
+	<table class="table">
+		<thead class="thead-inverse">
+			$1
+		</thead>
+	</table>
+endsnippet
+
+# Tables Responsive - Bootstrap 4
+snippet tabr
+	<div class="table-responsive">
+		<table class="table">
+			$1
+		</table>
+	</div>
+endsnippet
+
+# Tables Colspan - Bootstrap 4
+snippet tdcs
+	<td colspan="$1">
+endsnippet
+
+# Tables Colors (tr) - Bootstrap 4
+snippet tabtrc
+	<tr class="table-${1:active|success|warning|danger|info}">$2</tr>
+endsnippet
+
+# Tables Colors (td) - Bootstrap 4
+snippet tabtdc
+	<td class="table-${1:active|success|warning|danger|info}">$2</td>
+endsnippet
+
+
+# Content Typography
+# Text Muted - Bootstrap 4
+snippet texm
+	<small class="text-muted">$1</small>
+endsnippet
+# Display Heading - Bootstrap 4
+snippet dih
+	<h1 class="display-${1:1|2|3|4}">$2</h1>
+endsnippet
+# Lead - Bootstrap 4
+snippet lead
+	<p class="lead">
+		${1:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Integer posuere erat a ante.}
+	</p>'
+endsnippet
+
+# Blockquotes - Bootstrap 4
+snippet blo
+	<blockquote class="blockquote">
+		<p>${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.}</p>
+		<footer>${2:Someone famous in} <cite title="${3:Source Title}">${3:Source Title}</cite></footer>
+	</blockquote>
+endsnippet
+
+# Blockquotes Reverse - Bootstrap 4
+snippet blor
+	<blockquote class="blockquote blockquote-reverse">
+		<p>${1:Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.}</p>
+		<footer>${2:Someone famous in} <cite title="${3:Source Title}">${3:Source Title}</cite></footer>
+	</blockquote>
+endsnippet
+
+# List Unstyled - Bootstrap 4
+snippet lisun
+	<ul class="list-unstyled">
+		<li>$1</li>
+		<li>$2</li>
+		<li>$3</li>
+	</ul>
+endsnippet
+
+# List Inline - Bootstrap 4
+snippet lisin
+	<ul class="list-inline">
+		<li>$1</li>
+		<li>$2</li>
+		<li>$3</li>
+	</ul>
+endsnippet
+
+# Horizontal Description - Bootstrap 4
+snippet desho
+	<dt class="col-sm-3">${1:Description lists}</dt>
+	<dl class="dl-horizontal">
+		<dd class="col-sm-9">${2:A description list is perfect for defining terms.}</dd>
+
+		<dt class="col-sm-3">${3:Euismod}</dt>
+		<dd class="col-sm-9">${4:Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.}</dd>
+
+		<dd class="col-sm-9 col-sm-offset-3">${5:Donec id elit non mi porta gravida at eget metus.}</dd>
+
+		<dt class="col-sm-3">${6:Malesuada porta}</dt>
+		<dd class="col-sm-9">${7:Etiam porta sem malesuada magna mollis euismod.}</dd>
+
+		<dt class="col-sm-3 text-truncate">${8:Truncated term is truncated}</dt>
+		<dd class="col-sm-9">${9:Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.}</dd>
+	</dl>
+endsnippet
+
+
+# Containers
+# Container - Bootstrap 4
+snippet con
+	<div class="container">
+		$1
+	</div>
+endsnippet
+
+# Container Fluid (full width) - Bootstrap 4
+snippet conf
+	<div class="container-fluid">
+		$1
+	</div>
+endsnippet
+
+# Grid
+# Row - Bootstrap 4
+snippet row
+	<div class="row">
+		$1
+	</div>
+endsnippet
+
+# CRC
+# Simple grid - Bootstrap 4
+snippet grid
+	<div class="container">
+		<div class="row">${4:
+			<div class="col-${1:xs|sm|md|lg|xl}-${2:1-12}">
+				$3
+			</div>
+		}</div>
+	</div>
+endsnippet
+
+
+# 3 Columns grid - Bootstrap 4
+snippet 3col
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-md-4}">
+				${2:One of three columns}
+			</div>
+			<div class="${1:col-md-4}">
+				${2:One of three columns}
+			</div>
+			<div class="${1:col-md-4}">
+				${2:One of three columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 3 Responsive Columns grid - Bootstrap 4
+snippet 3colr
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-4}">
+				${4:One of three columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-4}">
+				${4:One of three columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-4}">
+				${4:One of three columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 2 Columns grid - Bootstrap 4
+snippet 2col
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-md-6}">
+				${2:One of two columns}
+			</div>
+			<div class="${1:col-md-6}">
+				${2:One of two columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 2 Responsive Columns grid - Bootstrap 4
+snippet 2colr
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-xs-12} ${2:col-md-6}">
+				${3:One of two columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-md-6}">
+				${3:One of two columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 4 Columns grid - Bootstrap 4
+snippet 4col
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-md-3}">
+				${2:One of four columns}
+			</div>
+			<div class="${1:col-md-3}">
+				${2:One of four columns}
+			</div>
+			<div class="${1:col-md-3}">
+				${2:One of four columns}
+			</div>
+			<div class="${1:col-md-3}">
+				${2:One of four columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 4 Responsive Columns grid - Bootstrap 4
+snippet 4colr
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-xs-6} ${2:col-md-3}">
+				${3:One of four columns}
+			</div>
+			<div class="${1:col-xs-6} ${2:col-md-3}">
+				${3:One of four columns}
+			</div>
+			<div class="${1:col-xs-6} ${2:col-md-3}">
+				${3:One of four columns}
+			</div>
+			<div class="${1:col-xs-6} ${2:col-md-3}">
+				${3:One of four columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 6 Columns grid - Bootstrap 4
+snippet 6col
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+			<div class="${1:col-md-2}">
+				${2:One of six columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 12 Columns grid - Bootstrap 4
+snippet 12col
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+			<div class="${1:col-md-1}">
+				${2:One of twelve columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+# 12 Responsive Columns grid - Bootstrap 4
+snippet 12colr
+	<div class="container">
+		<div class="row">
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+			<div class="${1:col-xs-12} ${2:col-sm-6} ${3:col-md-2} ${4:col-lg-1}">
+				${5:One of twelve columns}
+			</div>
+		</div>
+	</div>
+endsnippet
+
+
+# Columns
+# Column (full option)
+snippet col
+	<div class="col-${1:xs|sm|md|lg|xl}-${2:1-12}">
+	$3
+	</div>
+endsnippet
+
+# Column Extra Small
+snippet col-xs
+	<div class="col-xs-${1:1-12}">
+	$2
+	</div>
+endsnippet
+
+# Column Small
+snippet col-sm
+	<div class="col-sm-${1:1-12}">
+	$2
+	</div>
+endsnippet
+
+# Column Medium
+snippet col-md
+	<div class="col-md-${1:1-12}">
+	$2
+	</div>
+endsnippet
+
+# Column Large
+snippet col-lg
+	<div class="col-lg-${1:1-12}">
+	$2
+	</div>
+endsnippet
+
+# Column Extra Large
+snippet col-xl
+	<div class="col-xl-${1:1-12}">
+	$2
+	</div>
+endsnippet
+
+# Clearfix
+# Clearfix for Grid system
+snippet colcf
+	<div class="clearfix"></div>
+endsnippet
+
+
+# Media Object
+# Media - Bootstrap 4
+snippet med
+	<div class="media">
+		<a class="media-left" href="#$1">
+			<img class="media-object" data-src="$2" alt="$3">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">${4:Media heading}</h4>
+			$5
+		</div>
+	</div>
+endsnippet
+
+# Media right - Bootstrap 4
+snippet medr
+	<div class="media">
+		<a class="media-right" href="$1#">
+			<img class="media-object" data-src="$2" alt="$3">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">${4:Media heading}</h4>
+			$5
+		</div>
+	</div>
+endsnippet
+
+# Media middle - Bootstrap 4
+snippet medm
+	<div class="media">
+		<a class="media-left media-middle" href="$1#">
+			<img class="media-object" data-src="$2" alt="$3">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">${4:Media heading}</h4>
+			$5
+		</div>
+	</div>
+endsnippet
+
+# Media bottom - Bootstrap 4
+snippet medb
+	<div class="media">
+		<a class="media-left media-bottom" href="$1#">
+			<img class="media-object" data-src="$2" alt="$3">
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">${4:Media heading}</h4>
+			$5
+		</div>
+	</div>
+endsnippet
+
+# Media List - Bootstrap 4
+snippet medl
+	<ul class="media-list">
+		<li class="media">
+			<a class="media-left href="$1#">
+				<img class="media-object" data-src="$2" alt="$3">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">${4:Media heading}</h4>
+				$5
+			</div>
+		</li>
+		<li class="media">
+			<a class="media-left href="$1#">
+				<img class="media-object" data-src="$2" alt="$3">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">${4:Media heading}</h4>
+				$5
+			</div>
+		</li>
+	</ul>
+endsnippet
+
+
+# Hidden/Visible
+# Responsive hidden classes - Bootstrap 4
+snippet colh
+	<div class="col-${1:xs|sm|md|lg}-${2:1|12} hidden-${3:xs|sm|md|lg|xl}-${4:down|up}">
+		$5
+	</div>
+endsnippet
+
+# Responsive visible print classes - Bootstrap 4
+snippet colvp
+	<div class="visible-print-${1:block|inline|inline-block}">
+		$2
+	</div>
+endsnippet
+
+# Responsive hidden print classes - Bootstrap 4
+snippet colhp
+	<div class="hidden-print">
+		$1
+	</div>
+endsnippet
+
+# HTML5 - Bootstrap 4
+snippet htmlb4
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>$1</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+	<body>
+		<h1>${3:Hello, world!}</h1>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+	</html>
+endsnippet
+
+# Carousel template - Bootstrap 4
+snippet htmlca
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Carousel Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+		</head>
+		<body>
+
+			<nav class="navbar navbar-default navbar-static-top">
+				<a href="#" class="navbar-brand">Carousel</a>
+				<ul class="nav nav-pills">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+				</ul>
+			</nav>
+
+
+			<!-- Carousel
+			================================================== -->
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+					<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active">
+						<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+						<div class="container">
+							<div class="carousel-caption text-left">
+								<h1>Example headline.</h1>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>Another example headline.</h1>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+						<div class="container">
+							<div class="carousel-caption text-right">
+								<h1>One more for good measure.</h1>
+								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+								<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div><!-- /.carousel -->
+
+
+			<!-- Marketing messaging and featurettes
+			================================================== -->
+			<!-- Wrap the rest of the page in another container to center all the content. -->
+
+			<div class="container marketing">
+
+				<!-- Three columns of text below the carousel -->
+				<div class="row">
+					<div class="col-lg-4">
+						<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+						<h2>Heading</h2>
+						<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-4">
+						<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+						<h2>Heading</h2>
+						<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div><!-- /.col-lg-4 -->
+					<div class="col-lg-4">
+						<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+						<h2>Heading</h2>
+						<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+
+
+				<!-- START THE FEATURETTES -->
+
+				<hr class="featurette-divider">
+
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+						<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					</div>
+					<div class="col-md-5">
+						<img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjlkNGM4IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWQ0YzgiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+					</div>
+				</div>
+
+				<hr class="featurette-divider">
+
+				<div class="row featurette">
+					<div class="col-md-7 col-md-push-5">
+						<h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+						<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					</div>
+					<div class="col-md-5 col-md-pull-7">
+						<img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjliZmI0IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWJmYjQiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+					</div>
+				</div>
+
+				<hr class="featurette-divider">
+
+				<div class="row featurette">
+					<div class="col-md-7">
+						<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+						<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+					</div>
+					<div class="col-md-5">
+						<img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjlkMjE5IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWQyMTkiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+					</div>
+				</div>
+
+				<hr class="featurette-divider">
+
+				<!-- /END THE FEATURETTES -->
+
+
+				<!-- FOOTER -->
+				<footer>
+					<p class="pull-right"><a href="#">Back to top</a></p>
+					<p>© 2014 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+				</footer>
+
+			</div><!-- /.container -->
+
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+			<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="500"
+				height="500"
+				viewBox="0 0 500 500"
+				preserveAspectRatio="none"
+				style="
+					display: none;
+					visibility: hidden;
+					position: absolute;
+					top: -100%;
+					left: -100%;
+				"
+			>
+				<defs>
+					<style type="text/css"></style>
+				</defs>
+				<text
+					x="0"
+					y="25"
+					style="
+						font-weight:bold;
+						font-size:25pt;
+						font-family:Arial, Helvetica, Open Sans, sans-serif
+					"
+				>
+					500x500
+				</text>
+			</svg>
+		</body>
+	</html>
+endsnippet
+
+# Cover template - Bootstrap 4
+snippet htmlco
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Cover Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="site-wrapper">
+
+				<div class="site-wrapper-inner">
+
+					<div class="cover-container">
+
+						<div class="masthead clearfix">
+							<div class="inner">
+								<h3 class="masthead-brand">Cover</h3>
+								<nav class="nav nav-masthead">
+									<a class="nav-link active" href="#">Home</a>
+									<a class="nav-link" href="#">Features</a>
+									<a class="nav-link" href="#">Contact</a>
+								</nav>
+							</div>
+						</div>
+
+						<div class="inner cover">
+							<h1 class="cover-heading">Cover your page.</h1>
+							<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+							<p class="lead">
+								<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+							</p>
+						</div>
+
+						<div class="mastfoot">
+							<div class="inner">
+								<p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Dashboard template - Bootstrap 4
+snippet htmlda
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Dashboard Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Project name</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0px;">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Dashboard</a></li>
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+						<form class="navbar-form navbar-right">
+							<input type="text" class="form-control" placeholder="Search...">
+						</form>
+					</div>
+				</div>
+			</nav>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-3 col-md-2 sidebar">
+						<ul class="nav nav-sidebar">
+							<li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Reports</a></li>
+							<li><a href="#">Analytics</a></li>
+							<li><a href="#">Export</a></li>
+						</ul>
+						<ul class="nav nav-sidebar">
+							<li><a href="">Nav item</a></li>
+							<li><a href="">Nav item again</a></li>
+							<li><a href="">One more nav</a></li>
+							<li><a href="">Another nav item</a></li>
+							<li><a href="">More navigation</a></li>
+						</ul>
+						<ul class="nav nav-sidebar">
+							<li><a href="">Nav item again</a></li>
+							<li><a href="">One more nav</a></li>
+							<li><a href="">Another nav item</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+						<h1 class="page-header">Dashboard</h1>
+
+						<div class="row placeholders">
+							<div class="col-xs-6 col-sm-3 placeholder">
+								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+								<h4>Label</h4>
+								<span class="text-muted">Something else</span>
+							</div>
+							<div class="col-xs-6 col-sm-3 placeholder">
+								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+								<h4>Label</h4>
+								<span class="text-muted">Something else</span>
+							</div>
+							<div class="col-xs-6 col-sm-3 placeholder">
+								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+								<h4>Label</h4>
+								<span class="text-muted">Something else</span>
+							</div>
+							<div class="col-xs-6 col-sm-3 placeholder">
+								<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-fluid" alt="Generic placeholder thumbnail">
+								<h4>Label</h4>
+								<span class="text-muted">Something else</span>
+							</div>
+						</div>
+
+						<h2 class="sub-header">Section title</h2>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Header</th>
+										<th>Header</th>
+										<th>Header</th>
+										<th>Header</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1,001</td>
+										<td>Lorem</td>
+										<td>ipsum</td>
+										<td>dolor</td>
+										<td>sit</td>
+									</tr>
+									<tr>
+										<td>1,002</td>
+										<td>amet</td>
+										<td>consectetur</td>
+										<td>adipiscing</td>
+										<td>elit</td>
+									</tr>
+									<tr>
+										<td>1,003</td>
+										<td>Integer</td>
+										<td>nec</td>
+										<td>odio</td>
+										<td>Praesent</td>
+									</tr>
+									<tr>
+										<td>1,003</td>
+										<td>libero</td>
+										<td>Sed</td>
+										<td>cursus</td>
+										<td>ante</td>
+									</tr>
+									<tr>
+										<td>1,004</td>
+										<td>dapibus</td>
+										<td>diam</td>
+										<td>Sed</td>
+										<td>nisi</td>
+									</tr>
+									<tr>
+										<td>1,005</td>
+										<td>Nulla</td>
+										<td>quis</td>
+										<td>sem</td>
+										<td>at</td>
+									</tr>
+									<tr>
+										<td>1,006</td>
+										<td>nibh</td>
+										<td>elementum</td>
+										<td>imperdiet</td>
+										<td>Duis</td>
+									</tr>
+									<tr>
+										<td>1,007</td>
+										<td>sagittis</td>
+										<td>ipsum</td>
+										<td>Praesent</td>
+										<td>mauris</td>
+									</tr>
+									<tr>
+										<td>1,008</td>
+										<td>Fusce</td>
+										<td>nec</td>
+										<td>tellus</td>
+										<td>sed</td>
+									</tr>
+									<tr>
+										<td>1,009</td>
+										<td>augue</td>
+										<td>semper</td>
+										<td>porta</td>
+										<td>Mauris</td>
+									</tr>
+									<tr>
+										<td>1,010</td>
+										<td>massa</td>
+										<td>Vestibulum</td>
+										<td>lacinia</td>
+										<td>arcu</td>
+									</tr>
+									<tr>
+										<td>1,011</td>
+										<td>eget</td>
+										<td>nulla</td>
+										<td>Class</td>
+										<td>aptent</td>
+									</tr>
+									<tr>
+										<td>1,012</td>
+										<td>taciti</td>
+										<td>sociosqu</td>
+										<td>ad</td>
+										<td>litora</td>
+									</tr>
+									<tr>
+										<td>1,013</td>
+										<td>torquent</td>
+										<td>per</td>
+										<td>conubia</td>
+										<td>nostra</td>
+									</tr>
+									<tr>
+										<td>1,014</td>
+										<td>per</td>
+										<td>inceptos</td>
+										<td>himenaeos</td>
+										<td>Curabitur</td>
+									</tr>
+									<tr>
+										<td>1,015</td>
+										<td>sodales</td>
+										<td>ligula</td>
+										<td>in</td>
+										<td>libero</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+			<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Grids template - Bootstrap 4
+snippet htmlgd
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Grid Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/grid/grid.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+			<div class="container">
+
+				<div class="page-header">
+					<h1>Bootstrap grid examples</h1>
+					<p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+				</div>
+
+				<h3>Five grid tiers</h3>
+				<p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+				<div class="row">
+					<div class="col-xs-4">.col-xs-4</div>
+					<div class="col-xs-4">.col-xs-4</div>
+					<div class="col-xs-4">.col-xs-4</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-4">.col-sm-4</div>
+					<div class="col-sm-4">.col-sm-4</div>
+					<div class="col-sm-4">.col-sm-4</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">.col-md-4</div>
+					<div class="col-md-4">.col-md-4</div>
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4">.col-lg-4</div>
+					<div class="col-lg-4">.col-lg-4</div>
+					<div class="col-lg-4">.col-lg-4</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xl-4">.col-xl-4</div>
+					<div class="col-xl-4">.col-xl-4</div>
+					<div class="col-xl-4">.col-xl-4</div>
+				</div>
+
+				<h3>Three equal columns</h3>
+				<p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+				<div class="row">
+					<div class="col-md-4">.col-md-4</div>
+					<div class="col-md-4">.col-md-4</div>
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+
+				<h3>Three unequal columns</h3>
+				<p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+				<div class="row">
+					<div class="col-md-3">.col-md-3</div>
+					<div class="col-md-6">.col-md-6</div>
+					<div class="col-md-3">.col-md-3</div>
+				</div>
+
+				<h3>Two columns</h3>
+				<p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+				<div class="row">
+					<div class="col-md-8">.col-md-8</div>
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+
+				<h3>Full width, single column</h3>
+				<p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+				<hr>
+
+				<h3>Two columns with two nested columns</h3>
+				<p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+				<p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+				<div class="row">
+					<div class="col-md-8">
+						.col-md-8
+						<div class="row">
+							<div class="col-md-6">.col-md-6</div>
+							<div class="col-md-6">.col-md-6</div>
+						</div>
+					</div>
+					<div class="col-md-4">.col-md-4</div>
+				</div>
+
+				<hr>
+
+				<h3>Mixed: mobile and desktop</h3>
+				<p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+				<p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+				<div class="row">
+					<div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+					<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+					<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+					<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6">.col-xs-6</div>
+					<div class="col-xs-6">.col-xs-6</div>
+				</div>
+
+				<hr>
+
+				<h3>Mixed: mobile, tablet, and desktop</h3>
+				<p></p>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+					<div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+					<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+					<div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+				</div>
+
+				<hr>
+
+				<h3>Column clearing</h3>
+				<p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+				<div class="row">
+					<div class="col-xs-6 col-sm-3">
+						.col-xs-6 .col-sm-3
+						<br>
+						Resize your viewport or check it out on your phone for an example.
+					</div>
+					<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+					<!-- Add the extra clearfix for only the required viewport -->
+					<div class="clearfix visible-xs"></div>
+
+					<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+					<div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+				</div>
+
+				<hr>
+
+				<h3>Offset, push, and pull resets</h3>
+				<p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
+				<div class="row">
+					<div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+					<div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+					<div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+				</div>
+
+
+			</div> <!-- /container -->
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+
+		</body>
+	</html>
+endsnippet
+
+# Jumbotron template - Bootstrap 4
+snippet htmljb
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Jumbotron Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<a class="navbar-brand" href="#">Project name</a>
+				<ul class="nav nav-pills">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+			<div class="jumbotron">
+				<div class="container">
+					<h1>Hello, world!</h1>
+					<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+					<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+				</div>
+			</div>
+
+			<div class="container">
+				<!-- Example row of columns -->
+				<div class="row">
+					<div class="col-md-4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div>
+					<div class="col-md-4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div>
+					<div class="col-md-4">
+						<h2>Heading</h2>
+						<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+						<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+					</div>
+				</div>
+
+				<hr>
+
+				<footer>
+					<p>© Company 2014</p>
+				</footer>
+			</div> <!-- /container -->
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Navbar template - Bootstrap 4
+snippet htmlnb
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Navbar Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/navbar/navbar.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="container">
+
+				<div class="collapse" id="navbar-header">
+					<div class="inverse p-a">
+						<h3>Collapsed content</h3>
+						<p>Toggleable via the navbar brand.</p>
+					</div>
+				</div>
+				<div class="navbar navbar-default navbar-static-top">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+						☰
+					</button>
+				</div>
+
+				<!-- Main component for a primary marketing message or call to action -->
+				<div class="jumbotron">
+					<h1>Navbar example</h1>
+					<p>This example is a quick exercise to illustrate how the default navbar works. It's placed within a <code>.container</code> to limit its width and will scroll with the rest of the page's content.</p>
+					<p>
+						<a class="btn btn-lg btn-primary" href="http://v4-alpha.getbootstrap.com/components/#navbar" role="button">View navbar docs »</a>
+					</p>
+				</div>
+
+			</div> <!-- /container -->
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Fixed Navbar template - Bootstrap 4
+snippet htmlnbfx
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Fixed top navbar example for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/navbar-top-fixed/navbar-top-fixed.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="pos-f-t">
+				<div class="collapse" id="navbar-header">
+					<div class="container-fluid inverse p-a">
+						<h3>Collapsed content</h3>
+						<p>Toggleable via the navbar brand.</p>
+					</div>
+				</div>
+				<div class="navbar navbar-default navbar-static-top">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+						☰
+					</button>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Navbar example</h1>
+					<p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+					<a class="btn btn-lg btn-primary" href="http://v4-alpha.getbootstrap.com/components/#navbar" role="button">View navbar docs »</a>
+				</div>
+			</div>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Justified nav template - Bootstrap 4
+snippet htmlnbj
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Justified Nav Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="container">
+
+				<!-- The justified navigation menu is meant for single line per list item.
+						Multiple lines will require custom code not provided by Bootstrap. -->
+				<div class="masthead">
+					<h3 class="text-muted">Project name</h3>
+					<nav>
+						<ul class="nav nav-justified">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- Jumbotron -->
+				<div class="jumbotron">
+					<h1>Marketing stuff!</h1>
+					<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+					<p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+				</div>
+
+				<!-- Example row of columns -->
+				<div class="row">
+					<div class="col-lg-4">
+						<h2>Safari bug warning!</h2>
+						<p class="text-danger">As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+					</div>
+					<div class="col-lg-4">
+						<h2>Heading</h2>
+						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+						<p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+					</div>
+					<div class="col-lg-4">
+						<h2>Heading</h2>
+						<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+						<p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+					</div>
+				</div>
+
+				<!-- Site footer -->
+				<footer class="footer">
+					<p>© Company 2014</p>
+				</footer>
+
+			</div> <!-- /container -->
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+
+		</body>
+	</html>
+endsnippet
+
+# Static top Navbar template - Bootstrap 4
+snippet htmlnbst
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Top navbar example for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/navbar-top/navbar-top.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="collapse" id="navbar-header" aria-expanded="false" style="height: 0px;">
+				<div class="container-fluid inverse p-a">
+					<h3>Collapsed content</h3>
+					<p>Toggleable via the navbar brand.</p>
+				</div>
+			</div>
+			<div class="navbar navbar-default navbar-static-top">
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-header" aria-expanded="false">
+					☰
+				</button>
+			</div>
+
+			<div class="container">
+				<div class="jumbotron">
+					<h1>Navbar example</h1>
+					<p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+					<a class="btn btn-lg btn-primary" href="http://v4-alpha.getbootstrap.com/components/#navbar" role="button">View navbar docs »</a>
+				</div>
+			</div>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Sticky footer template - Bootstrap 4
+snippet htmlsf
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Sticky Footer Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<!-- Begin page content -->
+			<div class="container">
+				<div class="page-header">
+					<h1>Sticky footer</h1>
+				</div>
+				<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
+				<p>Use <a href="../sticky-footer-navbar">the sticky footer with a fixed navbar</a> if need be, too.</p>
+			</div>
+
+			<footer class="footer">
+				<div class="container">
+					<p class="text-muted">Place sticky footer content here.</p>
+				</div>
+			</footer>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+
+		</body>
+	</html>
+endsnippet
+
+# Sticky footer w/ navbar template - Bootstrap 4
+snippet htmlsfn
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Sticky Footer Navbar Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<!-- Fixed navbar -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Project name</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0px;">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Something else here</a>
+									<div role="separator" class="dropdown-divider"></div>
+									<h6 class="dropdown-header">Nav header</h6>
+									<a class="dropdown-item" href="#">Separated link</a>
+									<a class="dropdown-item" href="#">One more separated link</a>
+								</div>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</nav>
+
+			<!-- Begin page content -->
+			<div class="container">
+				<div class="page-header">
+					<h1>Sticky footer with fixed navbar</h1>
+				</div>
+				<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
+				<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+			</div>
+
+			<footer class="footer">
+				<div class="container">
+					<p class="text-muted">Place sticky footer content here.</p>
+				</div>
+			</footer>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+		</body>
+	</html>
+endsnippet
+
+# Sign-in template - Bootstrap 4
+snippet htmlsi
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+		<title>Signin Template for Bootstrap</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="http://v4-alpha.getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<form class="form-signin">
+				<h2 class="form-signin-heading">Please sign in</h2>
+				<label for="inputEmail" class="sr-only">Email address</label>
+				<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+				<label for="inputPassword" class="sr-only">Password</label>
+				<input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="remember-me"> Remember me
+					</label>
+				</div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			</form>
+
+		</div> <!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+
+	</body>
+	</html>
+endsnippet
+
+# Blog template - Bootstrap 4
+snippet htmlbl
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+			<title>Blog Template for Bootstrap</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://v4-alpha.getbootstrap.com/examples/blog/blog.css" rel="stylesheet">
+
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</head>
+
+		<body>
+
+			<div class="blog-masthead">
+				<div class="container">
+					<nav class="nav blog-nav">
+						<a class="nav-link active" href="#">Home</a>
+						<a class="nav-link" href="#">New features</a>
+						<a class="nav-link" href="#">Press</a>
+						<a class="nav-link" href="#">New hires</a>
+						<a class="nav-link" href="#">About</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="blog-header">
+				<div class="container">
+					<h1 class="blog-title">The Bootstrap Blog</h1>
+					<p class="lead blog-description">An example blog template built with Bootstrap.</p>
+				</div>
+			</div>
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-sm-8 blog-main">
+
+						<div class="blog-post">
+							<h2 class="blog-post-title">Sample blog post</h2>
+							<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+
+							<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+							<hr>
+							<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+							<blockquote>
+								<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</blockquote>
+							<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+							<h2>Heading</h2>
+							<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+							<h3>Sub-heading</h3>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+							<pre><code>Example code block</code></pre>
+							<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+							<h3>Sub-heading</h3>
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+							<ul>
+								<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+								<li>Donec id elit non mi porta gravida at eget metus.</li>
+								<li>Nulla vitae elit libero, a pharetra augue.</li>
+							</ul>
+							<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+							<ol>
+								<li>Vestibulum id ligula porta felis euismod semper.</li>
+								<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+								<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+							</ol>
+							<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+						</div><!-- /.blog-post -->
+
+						<div class="blog-post">
+							<h2 class="blog-post-title">Another blog post</h2>
+							<p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+
+							<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+							<blockquote>
+								<p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							</blockquote>
+							<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+							<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+						</div><!-- /.blog-post -->
+
+						<div class="blog-post">
+							<h2 class="blog-post-title">New feature</h2>
+							<p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+							<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+							<ul>
+								<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+								<li>Donec id elit non mi porta gravida at eget metus.</li>
+								<li>Nulla vitae elit libero, a pharetra augue.</li>
+							</ul>
+							<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+							<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+						</div><!-- /.blog-post -->
+
+						<nav>
+							<ul class="pager">
+								<li><a href="#">Older</a></li>
+								<li class="disabled"><a href="#">Newer</a></li>
+							</ul>
+						</nav>
+
+					</div><!-- /.blog-main -->
+
+					<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+						<div class="sidebar-module sidebar-module-inset">
+							<h4>About</h4>
+							<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+						</div>
+						<div class="sidebar-module">
+							<h4>Archives</h4>
+							<ol class="list-unstyled">
+								<li><a href="#">March 2014</a></li>
+								<li><a href="#">February 2014</a></li>
+								<li><a href="#">January 2014</a></li>
+								<li><a href="#">December 2013</a></li>
+								<li><a href="#">November 2013</a></li>
+								<li><a href="#">October 2013</a></li>
+								<li><a href="#">September 2013</a></li>
+								<li><a href="#">August 2013</a></li>
+								<li><a href="#">July 2013</a></li>
+								<li><a href="#">June 2013</a></li>
+								<li><a href="#">May 2013</a></li>
+								<li><a href="#">April 2013</a></li>
+							</ol>
+						</div>
+						<div class="sidebar-module">
+							<h4>Elsewhere</h4>
+							<ol class="list-unstyled">
+								<li><a href="#">GitHub</a></li>
+								<li><a href="#">Twitter</a></li>
+								<li><a href="#">Facebook</a></li>
+							</ol>
+						</div>
+					</div><!-- /.blog-sidebar -->
+
+				</div><!-- /.row -->
+
+			</div><!-- /.container -->
+
+			<footer class="blog-footer">
+				<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+				<p>
+					<a href="#">Back to top</a>
+				</p>
+			</footer>
+
+			<!-- Bootstrap core JavaScript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+			<script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+			<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+			<script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		</body>
+	</html>
+endsnippet
+
+# Starter template - Bootstrap 4
+snippet htmlst
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta http-equiv="x-ua-compatible" content="ie=edge">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" href="${1:/favicon.ico}">
+
+			<title>$2</title>
+
+			<!-- Bootstrap CSS -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<!-- Custom styles for this template -->
+			<link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/examples/starter-template/starter-template.css">
+			<!-- ${4:My} CSS -->
+			<link rel="stylesheet" href="${5:css/style.css}">
+		</head>
+		<body>
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<a class="navbar-brand" href="#">Project name</a>
+				<ul class="nav nav-pills">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="container">
+
+				<div class="starter-template">
+					<h1>Bootstrap starter template</h1>
+					<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+				</div>
+
+			</div><!-- /.container -->
+
+			<!-- jQuery first, then Bootstrap JS. -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/${6:2.1.4}/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+		</body>
+	</html>
+endsnippet
+
+# CSS & JS\'s CDN - Bootstrap 4
+snippet cdn-b4
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+endsnippet
+
+# CSS \'s CDN - Bootstrap 4
+snippet cdncs
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+endsnippet
+
+# JS \'s CDN - Bootstrap 4
+snippet cdnjs
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+endsnippet
+
+# Local CSS - Bootstrap 4
+snippet loccs
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="$1/css/bootstrap.css">
+endsnippet
+
+# Local JS - Bootstrap 4
+snippet locjs
+	<!-- jQuery first, then Bootstrap JS. -->
+	<script src="$1/js/jquery.min.js"></script>
+	<script src="$1/js/bootstrap.js"></script>
+endsnippet
+
